@@ -1,10 +1,15 @@
-import React from 'react';
+import React from "react";
+import classes from "../styles/Layout.module.css";
+import Nav from "./Nav";
 
-const Layout = () => {
+const Layout = ({ children }) => {
   return (
-    <div>
-      
-    </div>
+    <>
+      <Nav />
+      <main className={classes.main}>
+        <div className={classes.container}>{children}</div>
+      </main>
+    </>
   );
 };
 
