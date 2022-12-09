@@ -4,7 +4,11 @@ import Video from "./Video";
 
 const Videos = () => {
   return (
-    <div className={classes.video}>
+    <div className={classes.videos}>
+      <Video />
+      <Video />
+      <Video />
+      <Video />
       <Video />
     </div>
   );

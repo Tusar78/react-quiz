@@ -1,5 +1,5 @@
 import React from "react";
-import classes from '../../styles/Videos.module.css'
+import classes from '../../styles/Video.module.css'
 import image from '../../assets/images/3.jpg'
 
 const Video = () => {
