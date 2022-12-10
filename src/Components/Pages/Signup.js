@@ -1,5 +1,6 @@
 import React from "react";
 import classes from "../../styles/Signup.module.css";
+import Button from "../Button";
 import Checkbox from "../Checkbox";
 import Form from "../Form";
 import TextInput from "../TextInput";
@@ -25,6 +26,10 @@ const Signup = () => {
             icon="lock_lock"
           />
           <Checkbox text="I agree to the Terms &amp; Conditions" />
+          <Button>Submit now</Button>
+          <div className="info">
+            Already have an account? <a href="login.html">Login</a> instead.
+          </div>
         </Form>
       </div>
     </>
