@@ -1,8 +1,10 @@
 /* button component */
 .button {
+  height: 44px;
   background: var(--successGreen);
   color: var(--fontPrimary);
   padding: 0.6rem 1.2rem;
+  margin-top: 2rem;
   font-weight: 600;
   font-size: 15px;
   text-transform: uppercase;
