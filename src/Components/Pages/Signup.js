@@ -1,5 +1,6 @@
 import React from "react";
 import classes from "../../styles/Signup.module.css";
+import Checkbox from "../Checkbox";
 import Form from "../Form";
 import TextInput from "../TextInput";
 import Illustration from "./Illustration";
@@ -23,6 +24,7 @@ const Signup = () => {
             placeholder="Confirmed password"
             icon="lock_lock"
           />
+          <Checkbox text="I agree to the Terms &amp; Conditions" />
         </Form>
       </div>
     </>
