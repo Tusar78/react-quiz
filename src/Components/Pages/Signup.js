@@ -6,8 +6,8 @@ const Signup = () => {
       <h1>Create an account</h1>
       <div className="column">
         <Illustration />
-        <form action="#" className=''>
-          
+        <form action="#" className={`${classes.signup} form`}>
+
         </form>
       </div>
     </>
