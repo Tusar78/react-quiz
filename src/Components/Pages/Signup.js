@@ -4,7 +4,7 @@ import Button from "../Button";
 import Checkbox from "../Checkbox";
 import Form from "../Form";
 import TextInput from "../TextInput";
-import Illustration from "./Illustration";
+import Illustration from "../Illustration";
 
 const Signup = () => {
   return (
