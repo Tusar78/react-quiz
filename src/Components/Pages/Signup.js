@@ -1,4 +1,7 @@
-import React from 'react';
+import React from "react";
+import classes from "../../styles/Signup.module.css";
+import Form from "../Form";
+import Illustration from "./Illustration";
 
 const Signup = () => {
   return (
@@ -6,9 +9,9 @@ const Signup = () => {
       <h1>Create an account</h1>
       <div className="column">
         <Illustration />
-        <form action="#" className={`${classes.signup} form`}>
-
-        </form>
+        <Form>
+          
+        </Form>
       </div>
     </>
   );
