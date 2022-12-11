@@ -9,6 +9,7 @@ const Question = () => {
         <span className="material-icons-outlined"> help_outline </span>
         Here goes the question from Learn with Sumit?
       </div>
+      <Answers />
     </div>
   );
 };
