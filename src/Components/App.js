@@ -3,6 +3,7 @@ import "../styles/App.css";
 import Layout from "./Layout";
 import Home from "./Pages/Home";
 import Login from "./Pages/Login";
+import PageNotFound from "./Pages/PageNotFound";
 import Quiz from "./Pages/Quiz";
 import Result from "./Pages/Result";
 import Signup from "./Pages/Signup";
