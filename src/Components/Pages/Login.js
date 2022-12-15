@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import loginImage from "../../assets/images/login.svg";
 import classes from "../../styles/Login.module.css";
 import Button from "../Button";
@@ -23,7 +24,7 @@ const Login = () => {
           <TextInput type="password" placeholder="Enter password" icon="lock" />
           <Button>Submit Now</Button>
           <div class="info">
-            Don't have an account? <a href="signup.html">Signup</a> instead.
+            Don't have an account? <Link to="/signup">Signup</Link> instead.
           </div>
         </Form>
       </div>
