@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
 import Button from "./Button";
 import Checkbox from "./Checkbox";
@@ -17,6 +17,8 @@ const SignupForm = () => {
 
   const { signup } = useAuth();
 
+  const navigate = useNavigate();
+
   const handleForm = async (e) => {
     e.preventDefault();
     if (password !== confirmedPassword) {
@@ -27,7 +29,12 @@ const SignupForm = () => {
       setError("");
       setLoading(true);
       await signup(email, password, username);
-    } catch (error) {}
+      navigate("/");
+    } catch (error) {
+      console.log(error);
+      setLoading(false);
+      setError("Failed to create an account!");
+    }
   };
 
   return (
