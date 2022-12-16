@@ -45,6 +45,7 @@ const SignupForm = () => {
         icon="person"
         value={username}
         onChange={(e) => setUsername(e.target.value)}
+        required
       />
       <TextInput
         type="email"
@@ -52,6 +53,7 @@ const SignupForm = () => {
         icon="alternate_email"
         value={email}
         onChange={(e) => setEmail(e.target.value)}
+        required
       />
       <TextInput
         type="password"
@@ -59,6 +61,7 @@ const SignupForm = () => {
         icon="lock"
         value={password}
         onChange={(e) => setPassword(e.target.value)}
+        required
       />
       <TextInput
         type="password"
@@ -71,6 +74,7 @@ const SignupForm = () => {
         text="I agree to the Terms &amp; Conditions"
         value={agree}
         onChange={(e) => setAgree(e.target.value)}
+        required
       />
       <Button disabled={loading} type="button">
         Submit now
