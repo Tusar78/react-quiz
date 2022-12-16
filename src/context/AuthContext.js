@@ -21,10 +21,12 @@ const AuthProvider = ({ children }) => {
 
   useEffect(() => {
     const auth = getAuth();
-    onAuthStateChanged(auth, (user) => {
+    const unsubscribe = onAuthStateChanged(auth, (user) => {
       setCurrentUser(user);
       setLoading(false);
     });
+
+    return unsubscribe;
   }, []);
 
   // Signup Function
