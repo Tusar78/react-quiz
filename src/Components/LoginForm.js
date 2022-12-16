@@ -42,7 +42,7 @@ const LoginForm = () => {
         type="password"
         placeholder="Enter password"
         icon="lock"
-        value={email}
+        value={password}
         onChange={(e) => setPassword(e.target.value)}
       />
       <Button type="button" disabled={loading}>
