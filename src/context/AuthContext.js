@@ -24,7 +24,18 @@ const AuthProvider = ({ children }) => {
     await updateProfile(auth.currentUser, {
       displayName: username,
     });
+
+    const user = auth.currentUser;
+    setCurrentUser({
+      ...user,
+    });
   };
 
   return <AuthContext.Provider>{!loading && children}</AuthContext.Provider>;
 };
+
+
+export {
+  AuthProvider,
+  useAuth
+}
