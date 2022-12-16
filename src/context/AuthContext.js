@@ -1,4 +1,8 @@
-import { createUserWithEmailAndPassword, getAuth } from "firebase/auth";
+import {
+  createUserWithEmailAndPassword,
+  getAuth,
+  updateProfile,
+} from "firebase/auth";
 import React, { useContext, useState } from "react";
 import "../firebase";
 
@@ -16,6 +20,10 @@ const AuthProvider = ({ children }) => {
   const signup = async (email, password, username) => {
     const auth = getAuth();
     await createUserWithEmailAndPassword(auth, email, password);
+
+    await updateProfile(auth.currentUser, {
+      displayName: username,
+    });
   };
 
   return <AuthContext.Provider>{!loading && children}</AuthContext.Provider>;
