@@ -1,4 +1,9 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import Button from "./Button";
+import Checkbox from "./Checkbox";
+import Form from "./Form";
+import TextInput from "./TextInput";
 
 const SignupForm = () => {
   return (
