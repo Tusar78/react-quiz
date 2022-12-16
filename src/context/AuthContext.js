@@ -39,6 +39,7 @@ const AuthProvider = ({ children }) => {
     });
 
     const user = auth.currentUser;
+
     setCurrentUser({
       ...user,
     });
