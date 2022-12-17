@@ -8,6 +8,7 @@ import PageNotFound from "./Pages/PageNotFound";
 import Quiz from "./Pages/Quiz";
 import Result from "./Pages/Result";
 import Signup from "./Pages/Signup";
+import PrivetRoute from "./PrivetRoute";
 
 function App() {
   return (
@@ -19,8 +20,8 @@ function App() {
             <Route path="/home" element={<Home />} />
             <Route path="/signup" element={<Signup />} />
             <Route path="/login" element={<Login />} />
-            <Route path="/quiz" element={<Quiz />} />
-            <Route path="/result" element={<Result />} />
+            <PrivetRoute path="/quiz" element={<Quiz />} />
+            <PrivetRoute path="/result" element={<Result />} />
             <Route path="*" element={<PageNotFound />} />
           </Routes>
         </Layout>
