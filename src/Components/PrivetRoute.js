@@ -1,14 +1,10 @@
-import { redirect, Route } from "react-router-dom";
+import { Navigate } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
 
-const PrivetRoute = ({ component: Component, ...rest }) => {
+const PrivetRoute = ({ children }) => {
   const { currentUser } = useAuth();
 
-  return currentUser ? (
-    <Route {...rest}>{(props) => <Component {...props} />}</Route>
-  ) : (
-    redirect("/")
-  );
+  return currentUser ? children : <Navigate to="/login" />;
 };
 
 export default PrivetRoute;

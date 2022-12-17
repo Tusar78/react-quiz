@@ -20,8 +20,22 @@ function App() {
             <Route path="/home" element={<Home />} />
             <Route path="/signup" element={<Signup />} />
             <Route path="/login" element={<Login />} />
-            <PrivetRoute path="/quiz" element={<Quiz />} />
-            <PrivetRoute path="/result" element={<Result />} />
+            <Route
+              path="/quiz"
+              element={
+                <PrivetRoute>
+                  <Quiz />
+                </PrivetRoute>
+              }
+            />
+            <Route
+              path="/result"
+              element={
+                <PrivetRoute>
+                  <Result />
+                </PrivetRoute>
+              }
+            />
             <Route path="*" element={<PageNotFound />} />
           </Routes>
         </Layout>
