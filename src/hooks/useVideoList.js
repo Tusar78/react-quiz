@@ -2,8 +2,9 @@ import { get, getDatabase, orderByKey, query, ref } from "firebase/database";
 import { useEffect, useState } from "react";
 
 const useVideoList = () => {
-  const [loading,  setLoading] = useState(true);
-  const [error,  setError] = useState(false);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(false);
+  const [localVideos, setLocalVideos] = useState([]);
   useEffect(() => {
     const fetchVideos = async () => {
       const db = getDatabase();
@@ -16,13 +17,11 @@ const useVideoList = () => {
         // Request firebase database
         const snapshot = await get(videoQuery);
         setLoading(false);
-        if(snapshot.exists()) {
-          
+        if (snapshot.exists()) {
         } else {
-
         }
       } catch (err) {
-        console.log(err);        
+        console.log(err);
       }
     };
 
