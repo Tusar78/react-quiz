@@ -18,11 +18,15 @@ const useVideoList = () => {
         const snapshot = await get(videoQuery);
         setLoading(false);
         if (snapshot.exists()) {
-          setVideos();
+          setVideos((prevVideos) => {
+            return [...prevVideos, ...Object.values(snapshot.val())];
+          });
         } else {
         }
       } catch (err) {
         console.log(err);
+        setLoading(false);
+        setError(true);
       }
     };
 
