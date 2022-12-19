@@ -1,4 +1,4 @@
-import { getDatabase, orderByKey, query, ref } from "firebase/database";
+import { get, getDatabase, orderByKey, query, ref } from "firebase/database";
 import { useEffect, useState } from "react";
 
 const useVideoList = () => {
@@ -11,7 +11,16 @@ const useVideoList = () => {
       const videoQuery = query(videoRef, orderByKey());
 
       try {
+        setError(false);
+        setLoading(true);
+        // Request firebase database
+        const snapshot = await get(videoQuery);
+        setLoading(false);
+        if(snapshot.exists()) {
+          
+        } else {
 
+        }
       } catch (err) {
         console.log(err);        
       }
