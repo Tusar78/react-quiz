@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 const useVideoList = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
-  const [localVideos, setLocalVideos] = useState([]);
+  const [videos, setVideos] = useState([]);
   useEffect(() => {
     const fetchVideos = async () => {
       const db = getDatabase();
@@ -18,6 +18,7 @@ const useVideoList = () => {
         const snapshot = await get(videoQuery);
         setLoading(false);
         if (snapshot.exists()) {
+          setVideos();
         } else {
         }
       } catch (err) {
