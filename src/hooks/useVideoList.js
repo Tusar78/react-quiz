@@ -32,6 +32,12 @@ const useVideoList = () => {
 
     fetchVideos();
   }, []);
+
+  return {
+    loading,
+    error,
+    videos,
+  };
 };
 
 export default useVideoList;
